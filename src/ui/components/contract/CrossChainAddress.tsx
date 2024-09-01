@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { blake2AsU8a, decodeAddress, encodeAddress } from '@polkadot/util-crypto';
 import { TypeRegistry } from '@polkadot/types';
 import { u8aToHex } from '@polkadot/util';
-import { truncate } from 'lib/util';
 import { CopyButton } from 'ui/components/common/CopyButton';
 
 interface ChainAddressCalculatorProps {
