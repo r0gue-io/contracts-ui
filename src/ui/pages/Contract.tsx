@@ -1,7 +1,7 @@
 // Copyright 2022-2024 use-ink/contracts-ui authors & contributors
 // SPDX-License-Identifier: GPL-3.0-only
 
-import { BookOpenIcon, PlayIcon } from '@heroicons/react/outline';
+import { BookOpenIcon, PlayIcon, KeyIcon } from '@heroicons/react/outline';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { ContractHeader } from './ContractHeader';
@@ -12,6 +12,7 @@ import { Tabs } from 'ui/components/common/Tabs';
 import { HeaderButtons } from 'ui/components/common/HeaderButtons';
 import { RootLayout } from 'ui/layout';
 import { useStoredContract } from 'ui/hooks';
+import { CrossChainAddress } from 'ui/components/contract/CrossChainAddress';
 
 const TABS = [
   {
@@ -29,6 +30,15 @@ const TABS = [
       <>
         <PlayIcon />
         Interact
+      </>
+    ),
+  },
+  {
+    id: 'cross-chain-address',
+    label: (
+      <>
+        <KeyIcon />
+        Cross Chain Address
       </>
     ),
   },
@@ -51,6 +61,7 @@ export function Contract() {
           <Tabs index={tabIndex} setIndex={setTabIndex} tabs={TABS}>
             <MetadataTab abi={contract.abi} id={contract.id} />
             <InteractTab contract={contract} />
+            <CrossChainAddress address={address} />
           </Tabs>
         </RootLayout>
       )}
