@@ -1,10 +1,10 @@
 {
   "name": "contracts-ui",
   "version": "2.0.0",
-  "description": "Substrate Contracts UI",
+  "description": "Pop Contracts UI",
   "private": true,
   "type": "module",
-  "homepage": "https://contracts-ui.substrate.io",
+  "homepage": "https://onpop.io",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",

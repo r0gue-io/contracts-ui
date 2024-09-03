@@ -3,10 +3,10 @@
   "short_name": "ContractsUI",
   "display": "standalone",
   "background_color": "#1a1d1f",
-  "description": "Substrate Contracts UI.",
+  "description": "Pop Contracts UI.",
   "icons": [
     {
-      "src": "icon-32x32.png",
+      "src": "pop-favicon.ico",
       "type": "image/png",
       "sizes": "32x32"
     },
